@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0e0e0e;
+  color: #f3f3f3;
+  line-height: 1.6;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(15, 15, 15, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6%;
+  z-index: 999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #00ffe0;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.logo a:hover {
+  color: #00bfa6;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00ffe0;
+}
+
+.assignment-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid #00ffe0;
+  color: #00ffe0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.assignment-btn:hover {
+  background: #00ffe0;
+  color: #0e0e0e;
+}
+
+section {
+  padding: 120px 8% 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.Hero {
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.Hero h1 {
+  font-size: 2.2rem;
+  color: #00ffe0;
+  margin-bottom: 1rem;
+}
+
+.Hero h2 span {
+  color: #ffffff;
+}
+
+.Hero p {
+  color: #cfcfcf;
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+}
+
+.hero-image-container {
+  margin-top: 20px;
+}
+
+.hero-image-actual {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #00ffe0;
+  box-shadow: 0 0 20px rgba(0, 255, 224, 0.4);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-image-actual:hover {
+  transform: scale(1.05);
+}
+
+.video-container video {
+  width: 80%;
+  max-width: 700px;
+  border-radius: 15px;
+  border: 2px solid rgba(0, 255, 224, 0.3);
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 224, 0.1);
+}
+
+iframe {
+  margin-top: 20px;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 255, 224, 0.3);
+}
+
+.resume-link {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid #00ffe0;
+  border-radius: 30px;
+  color: #00ffe0;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.resume-link:hover {
+  background: #00ffe0;
+  color: #0e0e0e;
+}
+
+.learning-list, .learning-outcomes {
+  text-align: left;
+  color: #ccc;
+  list-style: disc;
+  margin: 15px auto;
+  width: 80%;
+  line-height: 1.8;
+}
+
+.content-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border-left: 3px solid #00ffe0;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    position: relative;
+    display: inline-block;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+  }
+
+  .hamburger::before {
+    top: -8px;
+  }
+
+  .hamburger::after {
+    top: 8px;
+  }
+
+  .nav-toggle.open .hamburger {
+    background: transparent;
+  }
+
+  .nav-toggle.open .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .nav-toggle.open .hamburger::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .Hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .Hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero-image-actual {
+    width: 150px;
+    height: 150px;
+  }
+}
